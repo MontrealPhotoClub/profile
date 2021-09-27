@@ -1,0 +1,34 @@
+{
+  "name": "montrealphotoclub",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@hcaptcha/react-hcaptcha": "^0.3.7",
+    "@headlessui/react": "^0.2.0",
+    "@heroicons/react": "^1.0.4",
+    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/typography": "^0.3.1",
+    "autoprefixer": "^10.2.1",
+    "classnames": "2.2.6",
+    "comma-number": "^2.0.1",
+    "date-fns": "2.16.1",
+    "gray-matter": "4.0.2",
+    "next": "latest",
+    "next-seo": "^4.17.0",
+    "postcss": "^8.2.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^6.15.4",
+    "react-hot-toast": "^2.1.1",
+    "swr": "^0.4.0",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
+  }
+}
