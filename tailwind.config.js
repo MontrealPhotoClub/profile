@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         brand: colors.sky,
+        error: colors.rose,
       },
     },
   },

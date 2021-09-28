@@ -14,10 +14,8 @@ export default async function handler(req, res) {
 
   const profiledata = await response.json()
 
-  res
-    .status(200)
-    .json({
-      attributes: profiledata.customer.attributes,
-      unsubscribed: profiledata.customer.unsubscribed,
-    })
+  res.status(200).json({
+    attributes: profiledata.customer.attributes,
+    unsubscribed: profiledata.customer.unsubscribed,
+  })
 }
