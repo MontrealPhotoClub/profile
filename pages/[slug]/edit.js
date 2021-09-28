@@ -29,14 +29,13 @@ function Profile() {
   })
 
   const onSubmit = async (data) => {
-    const res = await fetch('/api/updateProfile', {
+    await fetch('/api/updateProfile', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
     })
-    const text = await res.text()
   }
 
   if (error)
@@ -136,26 +135,26 @@ function Profile() {
 
   return (
     <div className="w-full max-w-2xl mx-auto overflow-hidden bg-white shadow sm:rounded-lg">
-      <div className="grid items-center justify-between grid-flow-col px-4 py-5">
-        <div className="">
-          <h3 className="text-lg font-medium leading-6 text-gray-900">
-            Edit your profile
-          </h3>
-          <p className="max-w-2xl mt-1 text-sm text-gray-500">
-            These are the personal details associated with your membership
-          </p>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="grid items-center justify-between grid-flow-col px-4 py-5">
+          <div className="">
+            <h3 className="text-lg font-medium leading-6 text-gray-900">
+              Edit your profile
+            </h3>
+            <p className="max-w-2xl mt-1 text-sm text-gray-500">
+              These are the personal details associated with your membership
+            </p>
+          </div>
+          <div className="">
+            <button
+              type="submit"
+              className="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-gray-900 bg-gray-100 border border-transparent rounded-md shadow-sm cursor-pointer hover:text-white hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm"
+            >
+              Submit changes
+            </button>
+          </div>
         </div>
-        <div className="">
-          <button
-            type="submit"
-            className="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-gray-900 bg-gray-100 border border-transparent rounded-md shadow-sm cursor-pointer hover:text-white hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm"
-          >
-            Submit changes
-          </button>
-        </div>
-      </div>
-      <div className="border-t border-gray-200">
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="border-t border-gray-200">
           <dl>
             <div className="flex items-center px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">First name</dt>
@@ -226,13 +225,24 @@ function Profile() {
                   <select
                     id="language"
                     name="language"
-                    class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-brand-500 focus:border-brand-500 sm:text-sm rounded-md"
+                    className="block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 rounded-md focus:outline-none focus:ring-brand-500 focus:border-brand-500 sm:text-sm"
                     ref={register}
                   >
-                    <option value="en" selected>
-                      English
-                    </option>
-                    <option value="fr">French</option>
+                    {data.unsubscribed === 'en' ? (
+                      <>
+                        <option value="en" selected>
+                          English
+                        </option>
+                        <option value="fr">French</option>
+                      </>
+                    ) : (
+                      <>
+                        <option value="en">English</option>
+                        <option value="fr" selected>
+                          French
+                        </option>
+                      </>
+                    )}
                   </select>
                 </div>
               </dd>
@@ -283,7 +293,7 @@ function Profile() {
                   <select
                     id="unsubscribed"
                     name="unsubscribed"
-                    class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-brand-500 focus:border-brand-500 sm:text-sm rounded-md"
+                    className="block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 rounded-md focus:outline-none focus:ring-brand-500 focus:border-brand-500 sm:text-sm"
                     ref={register}
                   >
                     {data.unsubscribed === true ? (
@@ -296,7 +306,9 @@ function Profile() {
                     ) : (
                       <>
                         <option value="true">Unsubscribed</option>
-                        <option value="false">Subscribed</option>
+                        <option value="false" selected>
+                          Subscribed
+                        </option>
                       </>
                     )}
                   </select>
@@ -304,8 +316,8 @@ function Profile() {
               </dd>
             </div>
           </dl>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   )
 }
