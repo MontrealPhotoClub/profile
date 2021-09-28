@@ -15,12 +15,17 @@ function Profile() {
 
   if (error)
     return (
-      <div className="w-full max-w-sm p-4 mx-auto border border-gray-200 rounded-md shadow">
-        <div className="text-center">
-          <h1 className="text-xl font-bold">Error: member not found</h1>
-          <p>We couldn't find your member profile.</p>
-        </div>
-        <div className="grid justify-center grid-flow-col gap-4 mx-auto mt-5">
+      <div className="w-full max-w-2xl mx-auto overflow-hidden bg-white shadow sm:rounded-lg">
+        <div className="grid items-center justify-between grid-flow-col px-4 py-5">
+          <div className="">
+            <h3 className="text-lg font-medium leading-6 text-gray-900">
+              Error: member not found
+            </h3>
+            <p className="max-w-2xl mt-1 text-sm text-gray-500">
+              We couldn't find your member profile.
+            </p>
+          </div>
+          <div className="grid justify-center grid-flow-col gap-4 mx-auto">
           <a
             href="https://montrealphoto.club"
             className="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-green-600 border border-transparent rounded-md shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm"
@@ -33,39 +38,167 @@ function Profile() {
             </span>
           </NextLink>
         </div>
+        </div>
       </div>
     )
   if (!data)
     return (
-      <div className="w-full max-w-sm p-4 mx-auto border rounded-md shadow border-brand-300">
-        <div className="flex space-x-4 animate-pulse">
-          <div className="flex-1 py-1 space-y-4">
-            <div className="w-3/4 h-4 rounded bg-brand-400"></div>
-            <div className="space-y-2">
-              <div className="h-4 rounded bg-brand-400"></div>
-              <div className="w-5/6 h-4 rounded bg-brand-400"></div>
-            </div>
+      <div className="w-full max-w-2xl mx-auto overflow-hidden bg-white shadow sm:rounded-lg">
+        <div className="grid items-center justify-between grid-flow-col px-4 py-5">
+          <div className="">
+            <h3 className="text-lg font-medium leading-6 text-gray-900">
+              Your profile
+            </h3>
+            <p className="max-w-2xl mt-1 text-sm text-gray-500">
+              These are the personal details associated with your membership
+            </p>
           </div>
+          <div className="">
+            <NextLink href={`/${router.query.slug}/edit`}>
+              <span className="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-gray-900 bg-gray-100 border border-transparent rounded-md shadow-sm cursor-pointer hover:text-white hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm">
+                Edit profile
+              </span>
+            </NextLink>
+          </div>
+        </div>
+        <div className="border-t border-gray-200">
+          <dl>
+            <div className="px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt className="text-sm font-medium text-gray-500">First name</dt>
+              <dd className="h-6 bg-gray-300 rounded sm:mt-0 sm:col-span-2 animate-pulse"></dd>
+            </div>
+            <div className="px-4 py-5 bg-white sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt className="text-sm font-medium text-gray-500">Last name</dt>
+              <dd className="h-6 bg-gray-300 rounded sm:mt-0 sm:col-span-2 animate-pulse"></dd>
+            </div>
+            <div className="px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt className="text-sm font-medium text-gray-500">
+                Email address
+              </dt>
+              <dd className="h-6 bg-gray-300 rounded sm:mt-0 sm:col-span-2 animate-pulse"></dd>
+            </div>
+            <div className="px-4 py-5 bg-white sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt className="text-sm font-medium text-gray-500">
+                Member since
+              </dt>
+              <dd className="h-6 bg-gray-300 rounded sm:mt-0 sm:col-span-2 animate-pulse"></dd>
+            </div>
+            <div className="px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt className="text-sm font-medium text-gray-500">Language</dt>
+              <dd className="h-6 bg-gray-300 rounded sm:mt-0 sm:col-span-2 animate-pulse"></dd>
+            </div>
+            <div className="px-4 py-5 bg-white sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt className="text-sm font-medium text-gray-500">Website</dt>
+              <dd className="h-6 bg-gray-300 rounded sm:mt-0 sm:col-span-2 animate-pulse"></dd>
+            </div>
+            <div className="px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt className="text-sm font-medium text-gray-500">Instagram</dt>
+              <dd className="h-6 bg-gray-300 rounded sm:mt-0 sm:col-span-2 animate-pulse"></dd>
+            </div>
+            <div className="px-4 py-5 bg-white sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt className="text-sm font-medium text-gray-500">
+                Subscribed to communications
+              </dt>
+              <dd className="h-6 bg-gray-300 rounded sm:mt-0 sm:col-span-2 animate-pulse"></dd>
+            </div>
+          </dl>
         </div>
       </div>
     )
 
   return (
-    <div className="w-full max-w-sm p-4 mx-auto border rounded-md shadow border-brand-300">
-      <div className="grid mb-4 space-y-2">
-        <div>Email: {data.attributes.email}</div>
-        <div>Member since: {data.attributes.created_at}</div>
-        <div>Language: {data.attributes.language === "fr" ? 'French' : 'English'}</div>
+    <div className="w-full max-w-2xl mx-auto overflow-hidden bg-white shadow sm:rounded-lg">
+      <div className="grid items-center justify-between grid-flow-col px-4 py-5">
+        <div className="">
+          <h3 className="text-lg font-medium leading-6 text-gray-900">
+            Your profile
+          </h3>
+          <p className="max-w-2xl mt-1 text-sm text-gray-500">
+            These are the personal details associated with your membership
+          </p>
+        </div>
+        <div className="">
+          <NextLink href={`/${router.query.slug}/edit`}>
+            <span className="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-gray-900 bg-gray-100 border border-transparent rounded-md shadow-sm cursor-pointer hover:text-white hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm">
+              Edit profile
+            </span>
+          </NextLink>
+        </div>
       </div>
-      <div className="grid justify-end grid-flow-col gap-4 mx-auto mt-5">
-        <NextLink href={`/${router.query.slug}/edit`}>
-          <span className="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-gray-900 bg-gray-100 border border-transparent rounded-md shadow-sm cursor-pointer hover:text-white hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm">
-            Edit profile
-          </span>
-        </NextLink>
+      <div className="border-t border-gray-200">
+        <dl>
+          <div className="px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt className="text-sm font-medium text-gray-500">First name</dt>
+            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+              {!data.attributes.firstName ? (
+                <span className="italic text-gray-400">None</span>
+              ) : (
+                data.attributes.firstName
+              )}
+            </dd>
+          </div>
+          <div className="px-4 py-5 bg-white sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt className="text-sm font-medium text-gray-500">Last name</dt>
+            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+              {!data.attributes.lastName ? (
+                <span className="italic text-gray-400">None</span>
+              ) : (
+                data.attributes.lastName
+              )}
+            </dd>
+          </div>
+          <div className="px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt className="text-sm font-medium text-gray-500">Email address</dt>
+            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+              {data.attributes.email}
+            </dd>
+          </div>
+          <div className="px-4 py-5 bg-white sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt className="text-sm font-medium text-gray-500">Member since</dt>
+            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+              {new Date(data.attributes.created_at*1000).toLocaleDateString("en-CA")}
+            </dd>
+          </div>
+          <div className="px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt className="text-sm font-medium text-gray-500">Language</dt>
+            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+              {data.attributes.language === 'fr' ? 'French' : 'English'}
+            </dd>
+          </div>
+          <div className="px-4 py-5 bg-white sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt className="text-sm font-medium text-gray-500">Website</dt>
+            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+              {!data.attributes.website ? (
+                <span className="italic text-gray-400">None</span>
+              ) : (
+                data.attributes.website
+              )}
+            </dd>
+          </div>
+          <div className="px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt className="text-sm font-medium text-gray-500">Instagram</dt>
+            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+              {!data.attributes.instagram ? (
+                <span className="italic text-gray-400">None</span>
+              ) : (
+                data.attributes.instagram
+              )}
+            </dd>
+          </div>
+          <div className="px-4 py-5 bg-white sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt className="text-sm font-medium text-gray-500">
+              Subscribed to communications
+            </dt>
+            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+              {data.unsubscribed === true ? 'Unsubscribed' : 'Subscribed'}
+            </dd>
+          </div>
+        </dl>
       </div>
     </div>
   )
 }
 
 export default Profile
+
+
