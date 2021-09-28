@@ -6,7 +6,7 @@ import LogoMobile from '../elements/logos/LogoMobile'
 
 export default function Header() {
   return (
-    <div className="sticky top-0 z-50 max-w-6xl pt-4 mx-auto bg-white bg-opacity-90">
+    <div className="sticky top-0 z-10 max-w-6xl pt-4 mx-auto bg-white bg-opacity-90">
       <div className="flex items-center justify-between py-6 text-xl font-semibold border-b-2 border-gray-100">
         <div>
           <NextLink href="/">
