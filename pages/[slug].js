@@ -26,18 +26,18 @@ function Profile() {
             </p>
           </div>
           <div className="grid justify-center grid-flow-col gap-4 mx-auto">
-          <a
-            href="https://montrealphoto.club"
-            className="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-green-600 border border-transparent rounded-md shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm"
-          >
-            Sign up now
-          </a>
-          <NextLink href="/">
-            <span className="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm cursor-pointer hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:w-auto sm:text-sm">
-              Return to home
-            </span>
-          </NextLink>
-        </div>
+            <a
+              href="https://montrealphoto.club"
+              className="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-green-600 border border-transparent rounded-md shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm"
+            >
+              Sign up now
+            </a>
+            <NextLink href="/">
+              <span className="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm cursor-pointer hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:w-auto sm:text-sm">
+                Return to home
+              </span>
+            </NextLink>
+          </div>
         </div>
       </div>
     )
@@ -156,7 +156,9 @@ function Profile() {
           <div className="px-4 py-5 bg-white sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt className="text-sm font-medium text-gray-500">Member since</dt>
             <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-              {new Date(data.attributes.created_at*1000).toLocaleDateString("en-CA")}
+              {new Date(data.attributes.created_at * 1000).toLocaleDateString(
+                'en-CA'
+              )}
             </dd>
           </div>
           <div className="px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -200,5 +202,3 @@ function Profile() {
 }
 
 export default Profile
-
-
