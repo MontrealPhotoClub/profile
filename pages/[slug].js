@@ -52,7 +52,11 @@ function Profile() {
 
   return (
     <div className="w-full max-w-sm p-4 mx-auto border rounded-md shadow border-brand-300">
-      <div className="grid mb-4">{data.attributes.email}</div>
+      <div className="grid mb-4 space-y-2">
+        <div>Email: {data.attributes.email}</div>
+        <div>Member since: {data.attributes.created_at}</div>
+        <div>Language: {data.attributes.language === "fr" ? 'French' : 'English'}</div>
+      </div>
       <div className="grid justify-end grid-flow-col gap-4 mx-auto mt-5">
         <NextLink href={`/${router.query.slug}/edit`}>
           <span className="inline-flex justify-center w-full px-4 py-2 text-base font-medium text-gray-900 bg-gray-100 border border-transparent rounded-md shadow-sm cursor-pointer hover:text-white hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm">
