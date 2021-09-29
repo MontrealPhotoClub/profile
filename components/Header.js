@@ -23,14 +23,11 @@ export default function Header() {
             </div>
           </NextLink>
         </div>
-        <div className="grid grid-flow-col gap-4 text-sm font-medium outline-none md:text-base md:gap-8 focus:outline-none">
-          <NextLink href={router.pathname.includes('fr') == true ? '/' : '/fr'}>
-            <TranslateIcon className="w-5 h-5 cursor-pointer" />
-          </NextLink>
-          <a href="https://montrealphoto.club" target="_blank">
+        <div className="grid items-center grid-flow-col gap-2">
+          <a href="https://montrealphoto.club">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 cursor-pointer"
+              className="w-6 h-6 cursor-pointer hover:text-brand-600"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -43,6 +40,9 @@ export default function Header() {
               />
             </svg>
           </a>
+          <NextLink href={router.pathname.includes('fr') == true ? '/' : '/fr'}>
+            <TranslateIcon className="w-6 h-6 cursor-pointer hover:text-brand-600" />
+          </NextLink>
         </div>
       </div>
     </div>
