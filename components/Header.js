@@ -24,7 +24,7 @@ export default function Header() {
           </NextLink>
         </div>
         <div className="grid grid-flow-col gap-4 text-sm font-medium outline-none md:text-base md:gap-8 focus:outline-none">
-          <NextLink href={router.pathname.includes('fr') == true ? "/" : "/fr"}>
+          <NextLink href={router.pathname.includes('fr') == true ? '/' : '/fr'}>
             <TranslateIcon className="w-5 h-5 cursor-pointer" />
           </NextLink>
           <a href="https://montrealphoto.club" target="_blank">

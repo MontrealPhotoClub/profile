@@ -68,7 +68,9 @@ function Profile() {
               <dd className="h-6 bg-gray-300 rounded sm:mt-0 sm:col-span-2 animate-pulse"></dd>
             </div>
             <div className="px-4 py-5 bg-white sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-              <dt className="text-sm font-medium text-gray-500">Nom de famille</dt>
+              <dt className="text-sm font-medium text-gray-500">
+                Nom de famille
+              </dt>
               <dd className="h-6 bg-gray-300 rounded sm:mt-0 sm:col-span-2 animate-pulse"></dd>
             </div>
             <div className="px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">

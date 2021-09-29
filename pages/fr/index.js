@@ -60,7 +60,8 @@ export default function Home() {
               <p className="max-w-2xl mt-1 text-sm text-gray-500">
                 Entrez l'adresse courriel associée avec votre profil d'adhésion.
                 <br />
-                Nous vous enverrons un courriel automatisé afin d'accéder à votre profil.
+                Nous vous enverrons un courriel automatisé afin d'accéder à
+                votre profil.
               </p>
             </div>
           </div>
@@ -140,7 +141,9 @@ export default function Home() {
                 </Dialog.Title>
                 <div className="mt-2">
                   <p className="text-sm text-gray-500">
-                    Nous avons trouvé un profil associé à cette adresse courriel. Nous vous avons envoyé un lien de connexion par courriel.
+                    Nous avons trouvé un profil associé à cette adresse
+                    courriel. Nous vous avons envoyé un lien de connexion par
+                    courriel.
                   </p>
                 </div>
 
@@ -213,8 +216,8 @@ export default function Home() {
                 </Dialog.Title>
                 <div className="mt-2">
                   <p className="text-sm text-gray-500">
-                    Nous n'avons pas pu trouver de profil associé à cette adresse courriel.
-                    Merci de vérifier votre adresse.
+                    Nous n'avons pas pu trouver de profil associé à cette
+                    adresse courriel. Merci de vérifier votre adresse.
                   </p>
                 </div>
 
