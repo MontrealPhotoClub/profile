@@ -32,10 +32,12 @@ export default async (req, res) => {
           body: payload,
         }
       )
+
+      return res.status(200).end()
     } else {
       console.error('No profile associated with that email')
+      return res.status(404).end()
     }
-    return res.status(200).end()
   }
   return res.status(500).end()
 }
