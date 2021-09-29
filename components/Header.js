@@ -3,8 +3,11 @@ import { useRouter } from 'next/router'
 
 import Logo from '../elements/logos/Logo'
 import LogoMobile from '../elements/logos/LogoMobile'
+import { TranslateIcon } from '@heroicons/react/solid'
 
 export default function Header() {
+  const router = useRouter()
+
   return (
     <div className="sticky top-0 z-10 max-w-6xl pt-4 mx-auto bg-white bg-opacity-90">
       <div className="flex items-center justify-between py-6 text-xl font-semibold border-b-2 border-gray-100">
@@ -21,6 +24,9 @@ export default function Header() {
           </NextLink>
         </div>
         <div className="grid grid-flow-col gap-4 text-sm font-medium outline-none md:text-base md:gap-8 focus:outline-none">
+          <NextLink href={router.pathname.includes('fr') == true ? "/" : "/fr"}>
+            <TranslateIcon className="w-5 h-5 cursor-pointer" />
+          </NextLink>
           <a href="https://montrealphoto.club" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
