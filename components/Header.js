@@ -9,8 +9,8 @@ export default function Header() {
   const router = useRouter()
 
   return (
-    <div className="sticky top-0 z-10 max-w-6xl pt-4 mx-auto bg-white bg-opacity-90">
-      <div className="flex items-center justify-between py-6 text-xl font-semibold border-b-2 border-gray-100">
+    <div className="sticky top-0 z-10 mx-auto max-w-6xl bg-white bg-opacity-90 pt-4">
+      <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 text-xl font-semibold">
         <div>
           <NextLink href="/">
             <div className="cursor-pointer">
@@ -23,11 +23,11 @@ export default function Header() {
             </div>
           </NextLink>
         </div>
-        <div className="grid items-center grid-flow-col gap-2">
+        <div className="grid grid-flow-col items-center gap-2">
           <a href="https://montrealphoto.club">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 cursor-pointer hover:text-brand-600"
+              className="h-6 w-6 cursor-pointer hover:text-brand-600"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -41,7 +41,7 @@ export default function Header() {
             </svg>
           </a>
           <NextLink href={router.pathname.includes('fr') == true ? '/' : '/fr'}>
-            <TranslateIcon className="w-6 h-6 cursor-pointer hover:text-brand-600" />
+            <TranslateIcon className="h-6 w-6 cursor-pointer hover:text-brand-600" />
           </NextLink>
         </div>
       </div>
