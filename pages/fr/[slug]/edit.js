@@ -1,11 +1,10 @@
-import useSWR from 'swr'
 import { useRouter } from 'next/router'
+import useSWR from 'swr'
 
-import React, { Fragment, useEffect, useRef, useState } from 'react'
+import { Fragment, useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 import NextLink from 'next/link'
-import { route } from 'next/dist/server/router'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
