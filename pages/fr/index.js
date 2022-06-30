@@ -1,9 +1,8 @@
-import React, { Fragment, useEffect, useRef, useState } from 'react'
+import { Fragment, useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 import { Dialog, Transition } from '@headlessui/react'
 
-import NextLink from 'next/link'
 
 export default function Home() {
   // headlessui
