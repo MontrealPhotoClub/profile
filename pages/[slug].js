@@ -31,7 +31,7 @@ function Profile() {
             >
               Sign up now
             </a>
-            <NextLink href="/">
+            <NextLink href="/" legacyBehavior>
               <span className="inline-flex w-full cursor-pointer justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:w-auto sm:text-sm">
                 Return to home
               </span>
@@ -53,7 +53,7 @@ function Profile() {
             </p>
           </div>
           <div className="">
-            <NextLink href={`/${router.query.slug}/edit`}>
+            <NextLink href={`/${router.query.slug}/edit`} legacyBehavior>
               <span className="inline-flex w-full cursor-pointer justify-center rounded-md border border-transparent bg-gray-100 px-4 py-2 text-base font-medium text-gray-900 shadow-sm hover:bg-green-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">
                 Edit profile
               </span>
@@ -117,7 +117,7 @@ function Profile() {
           </p>
         </div>
         <div className="">
-          <NextLink href={`/${router.query.slug}/edit`}>
+          <NextLink href={`/${router.query.slug}/edit`} legacyBehavior>
             <span className="inline-flex w-full cursor-pointer justify-center rounded-md border border-transparent bg-gray-100 px-4 py-2 text-base font-medium text-gray-900 shadow-sm hover:bg-green-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">
               Edit profile
             </span>

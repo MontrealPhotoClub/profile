@@ -9,7 +9,6 @@ import SEO from '../next-seo-config'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 
-
 function MyApp({ Component, pageProps }) {
   return (
     <>

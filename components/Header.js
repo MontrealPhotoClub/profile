@@ -12,12 +12,12 @@ export default function Header() {
     <div className="sticky top-0 z-10 mx-auto max-w-6xl bg-white bg-opacity-90 pt-4">
       <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 text-xl font-semibold">
         <div>
-          <NextLink href="/">
+          <NextLink href="/" legacyBehavior>
             <div className="cursor-pointer">
               <Logo />
             </div>
           </NextLink>
-          <NextLink href="/">
+          <NextLink href="/" legacyBehavior>
             <div className="cursor-pointer">
               <LogoMobile />
             </div>
@@ -40,7 +40,10 @@ export default function Header() {
               />
             </svg>
           </a>
-          <NextLink href={router.pathname.includes('fr') == true ? '/' : '/fr'}>
+          <NextLink
+            href={router.pathname.includes('fr') == true ? '/' : '/fr'}
+            legacyBehavior
+          >
             <TranslateIcon className="h-6 w-6 cursor-pointer hover:text-brand-600" />
           </NextLink>
         </div>
