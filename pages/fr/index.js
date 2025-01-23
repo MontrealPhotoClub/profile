@@ -48,7 +48,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="mx-auto w-full max-w-2xl overflow-hidden bg-white shadow sm:rounded-lg">
+      <div className="mx-auto w-full max-w-2xl overflow-hidden bg-white shadow-sm sm:rounded-lg">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-flow-col items-center justify-between px-4 py-5">
             <div className="">
@@ -69,14 +69,14 @@ export default function Home() {
                 type="text"
                 name="email"
                 id="email"
-                className="block w-full max-w-lg rounded-md border-gray-300 text-gray-900 shadow-sm focus:border-brand-500 focus:ring-brand-500"
+                className="block w-full max-w-lg rounded-md border-gray-300 text-gray-900 shadow-xs focus:border-brand-500 focus:ring-brand-500"
                 placeholder="Votre adresse courriel"
                 aria-describedby="email-description"
                 ref={register({ required: true, maxLength: 80 })}
               />
               <button
                 type="submit"
-                className="inline-flex w-full cursor-pointer justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-base font-medium text-gray-900 shadow-sm hover:bg-green-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+                className="inline-flex w-full cursor-pointer justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-base font-medium text-gray-900 shadow-xs hover:bg-green-500 hover:text-white focus:outline-hidden focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
               >
                 Accéder
               </button>
@@ -148,7 +148,7 @@ export default function Home() {
                 <div className="mt-4">
                   <button
                     type="button"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-gray-100 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-green-500 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    className="inline-flex justify-center rounded-md border border-transparent bg-gray-100 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-green-500 hover:text-white focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                     onClick={closeModal}
                   >
                     Parfait, merci!
@@ -222,13 +222,13 @@ export default function Home() {
                 <div className="mx-auto mt-4 grid grid-flow-col justify-center gap-4">
                   <a
                     href="https://montrealphoto.club"
-                    className="inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-green-700 sm:w-auto sm:text-sm"
+                    className="inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base font-medium text-white shadow-xs hover:bg-green-700 sm:w-auto sm:text-sm"
                   >
                     S'inscrire
                   </a>
                   <button
                     type="button"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-gray-100 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                    className="inline-flex justify-center rounded-md border border-transparent bg-gray-100 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                     onClick={closeModalError}
                   >
                     Fermer

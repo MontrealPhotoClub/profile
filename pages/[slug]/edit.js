@@ -39,7 +39,7 @@ function Profile() {
 
   if (error)
     return (
-      <div className="mx-auto w-full max-w-2xl overflow-hidden bg-white shadow sm:rounded-lg">
+      <div className="mx-auto w-full max-w-2xl overflow-hidden bg-white shadow-sm sm:rounded-lg">
         <div className="grid grid-flow-col items-center justify-between px-4 py-5">
           <div className="">
             <h3 className="text-lg font-medium leading-6 text-gray-900">
@@ -52,12 +52,12 @@ function Profile() {
           <div className="mx-auto grid grid-flow-col justify-center gap-4">
             <a
               href="https://montrealphoto.club"
-              className="inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+              className="inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base font-medium text-white shadow-xs hover:bg-green-700 focus:outline-hidden focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
             >
               Sign up now
             </a>
             <NextLink href="/" legacyBehavior>
-              <span className="inline-flex w-full cursor-pointer justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:w-auto sm:text-sm">
+              <span className="inline-flex w-full cursor-pointer justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-xs hover:text-gray-500 focus:outline-hidden focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:w-auto sm:text-sm">
                 Return to home
               </span>
             </NextLink>
@@ -68,7 +68,7 @@ function Profile() {
 
   if (!data)
     return (
-      <div className="mx-auto w-full max-w-2xl overflow-hidden bg-white shadow sm:rounded-lg">
+      <div className="mx-auto w-full max-w-2xl overflow-hidden bg-white shadow-sm sm:rounded-lg">
         <div className="grid grid-flow-col items-center justify-between px-4 py-5">
           <div className="">
             <h3 className="text-lg font-medium leading-6 text-gray-900">
@@ -80,7 +80,7 @@ function Profile() {
           </div>
           <div className="">
             <button
-              className="inline-flex w-full cursor-pointer justify-center rounded-md border border-transparent bg-error-600 px-4 py-2 text-base font-medium text-gray-50 shadow-sm hover:bg-green-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+              className="inline-flex w-full cursor-pointer justify-center rounded-md border border-transparent bg-error-600 px-4 py-2 text-base font-medium text-gray-50 shadow-xs hover:bg-green-500 hover:text-white focus:outline-hidden focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
               disabled
             >
               Submit changes
@@ -91,41 +91,41 @@ function Profile() {
           <dl>
             <div className="flex items-center bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">First name</dt>
-              <dd className="h-6 animate-pulse rounded bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
+              <dd className="h-6 animate-pulse rounded-sm bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
             </div>
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Last name</dt>
-              <dd className="h-6 animate-pulse rounded bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
+              <dd className="h-6 animate-pulse rounded-sm bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
             </div>
             <div className="flex items-center bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">
                 Email address
               </dt>
-              <dd className="h-6 animate-pulse rounded bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
+              <dd className="h-6 animate-pulse rounded-sm bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
             </div>
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">
                 Member since
               </dt>
-              <dd className="h-6 animate-pulse rounded bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
+              <dd className="h-6 animate-pulse rounded-sm bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
             </div>
             <div className="flex items-center bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Language</dt>
-              <dd className="h-6 animate-pulse rounded bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
+              <dd className="h-6 animate-pulse rounded-sm bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
             </div>
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Website</dt>
-              <dd className="h-6 animate-pulse rounded bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
+              <dd className="h-6 animate-pulse rounded-sm bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
             </div>
             <div className="flex items-center bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Instagram</dt>
-              <dd className="h-6 animate-pulse rounded bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
+              <dd className="h-6 animate-pulse rounded-sm bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
             </div>
             <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">
                 Subscribed to communications
               </dt>
-              <dd className="h-6 animate-pulse rounded bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
+              <dd className="h-6 animate-pulse rounded-sm bg-gray-300 sm:col-span-2 sm:mt-0"></dd>
             </div>
           </dl>
         </div>
@@ -148,7 +148,7 @@ function Profile() {
 
     return (
       <>
-        <div className="mx-auto w-full max-w-2xl overflow-hidden bg-white shadow sm:rounded-lg">
+        <div className="mx-auto w-full max-w-2xl overflow-hidden bg-white shadow-sm sm:rounded-lg">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="grid grid-flow-col items-center justify-between px-4 py-5">
               <div className="">
@@ -163,7 +163,7 @@ function Profile() {
                 <button
                   type="submit"
                   onClick={openModal}
-                  className="inline-flex w-full cursor-pointer justify-center rounded-md border border-transparent bg-gray-100 px-4 py-2 text-base font-medium text-gray-900 shadow-sm hover:bg-green-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+                  className="inline-flex w-full cursor-pointer justify-center rounded-md border border-transparent bg-gray-100 px-4 py-2 text-base font-medium text-gray-900 shadow-xs hover:bg-green-500 hover:text-white focus:outline-hidden focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
                 >
                   Submit changes
                 </button>
@@ -180,7 +180,7 @@ function Profile() {
                       type="text"
                       name="firstName"
                       id="firstName"
-                      className="block w-full rounded-md border-gray-300 text-gray-900 shadow-sm focus:border-brand-500 focus:ring-brand-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 text-gray-900 shadow-xs focus:border-brand-500 focus:ring-brand-500 sm:text-sm"
                       placeholder={
                         !data.attributes.firstName
                           ? 'Your first name'
@@ -200,7 +200,7 @@ function Profile() {
                       type="text"
                       name="lastName"
                       id="lastName"
-                      className="block w-full rounded-md border-gray-300 text-gray-900 shadow-sm focus:border-brand-500 focus:ring-brand-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 text-gray-900 shadow-xs focus:border-brand-500 focus:ring-brand-500 sm:text-sm"
                       placeholder={
                         !data.attributes.lastName
                           ? 'Your last name'
@@ -220,7 +220,7 @@ function Profile() {
                       type="text"
                       name="email"
                       id="email"
-                      className="block w-full rounded-md border-gray-300 text-gray-900 shadow-sm focus:border-brand-500 focus:ring-brand-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 text-gray-900 shadow-xs focus:border-brand-500 focus:ring-brand-500 sm:text-sm"
                       placeholder={data.attributes.email}
                       aria-describedby="email-description"
                       ref={register({ required: true, maxLength: 80 })}
@@ -246,7 +246,7 @@ function Profile() {
                       <select
                         id="language"
                         name="language"
-                        className="mt-1 block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-brand-500 focus:outline-none focus:ring-brand-500 sm:text-sm"
+                        className="mt-1 block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-brand-500 focus:outline-hidden focus:ring-brand-500 sm:text-sm"
                         ref={register}
                       >
                         {data.unsubscribed === 'en' ? (
@@ -275,7 +275,7 @@ function Profile() {
                       type="text"
                       name="website"
                       id="website"
-                      className="block w-full rounded-md border-gray-300 text-gray-900 shadow-sm focus:border-brand-500 focus:ring-brand-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 text-gray-900 shadow-xs focus:border-brand-500 focus:ring-brand-500 sm:text-sm"
                       placeholder={
                         !data.attributes.website
                           ? 'Your website'
@@ -295,7 +295,7 @@ function Profile() {
                       type="text"
                       name="instagram"
                       id="instagram"
-                      className="block w-full rounded-md border-gray-300 text-gray-900 shadow-sm focus:border-brand-500 focus:ring-brand-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 text-gray-900 shadow-xs focus:border-brand-500 focus:ring-brand-500 sm:text-sm"
                       placeholder={
                         !data.attributes.instagram
                           ? 'Your Instagram username'
@@ -316,7 +316,7 @@ function Profile() {
                       <select
                         id="unsubscribed"
                         name="unsubscribed"
-                        className="mt-1 block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-brand-500 focus:outline-none focus:ring-brand-500 sm:text-sm"
+                        className="mt-1 block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-brand-500 focus:outline-hidden focus:ring-brand-500 sm:text-sm"
                         ref={register}
                       >
                         {data.unsubscribed === true ? (
@@ -391,7 +391,7 @@ function Profile() {
                   <div className="mt-4">
                     <button
                       type="button"
-                      className="inline-flex w-full cursor-pointer justify-center rounded-md border border-transparent bg-gray-100 px-4 py-2 text-base font-medium text-gray-900 shadow-sm hover:bg-green-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+                      className="inline-flex w-full cursor-pointer justify-center rounded-md border border-transparent bg-gray-100 px-4 py-2 text-base font-medium text-gray-900 shadow-xs hover:bg-green-500 hover:text-white focus:outline-hidden focus:ring-2 focus:ring-green-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
                       onClick={closeModal}
                     >
                       Got it, thanks!
